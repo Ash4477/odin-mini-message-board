@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("head") %>
+  <body>
+    <div class="header">
+      <h1>Mini Message Board</h1>
+    </div>
+    <form action="/new" method="POST">
+      <h2>New Message Form</h2>
+      <input name="username" type="text" min="4" placeholder="Username" />
+      <textarea
+        rows="5"
+        name="message"
+        id="message-ta"
+        placeholder="Message"
+      ></textarea>
+      <button type="submit">Submit Message</button>
+    </form>
+  </body>
+</html>

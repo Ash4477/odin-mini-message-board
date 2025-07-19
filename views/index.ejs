@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("head"); %>
+  <body>
+    <div class="header">
+      <h1><a href="/">Mini Message Board</a></h1>
+      <button><a href="/new">Post Message</a></button>
+    </div>
+    <ul>
+      <% messages.forEach((msg) => { %>
+      <li>
+        <div class="list-header">
+          <p><%= msg.user %></p>
+          <p class="date"><%= msg.added %></p>
+        </div>
+        <p><%= msg.text %></p>
+      </li>
+      <% }) %>
+    </ul>
+  </body>
+</html>
